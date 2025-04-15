@@ -1,6 +1,6 @@
 {
   "name": "sentry-issues-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a mcp server to get sentry issue by id or url for LLM",
   "main": "build/index.js",
   "scripts": {
@@ -9,6 +9,14 @@
     "start": "node build/index.js",
     "debug": "npm run build && npx -y @modelcontextprotocol/inspector -e SENTRY_PROJ=<your_sentry_proj> -e SENTRY_HOST=<your_sentry_host> -e SENTRY_ORG=<your_sentry_org> -e SENTRY_USER_TOKEN=<your_sentry_user_token> node ./build/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leee62/sentry-issues-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Leee62/sentry-issues-mcp/issues"
+  },
+  "homepage": "https://github.com/Leee62/sentry-issues-mcp#readme",
   "files": [
     "build"
   ],
