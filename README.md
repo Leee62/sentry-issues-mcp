@@ -2,6 +2,7 @@
 
 [![中文文档](https://img.shields.io/badge/中文文档-查看-red)](README_cn.md)
 [![English](https://img.shields.io/badge/English-Read-blue)](README.md)
+[![smithery badge](https://smithery.ai/badge/@Leee62/sentry-issues-mcp)](https://smithery.ai/server/@Leee62/sentry-issues-mcp)
 
 ## Description
 
@@ -30,6 +31,15 @@ U can let LLM analysis the Res, or u want to do.
 
 ## QuickStart
 
+### Installing via Smithery
+
+To install sentry-issues-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Leee62/sentry-issues-mcp):
+
+```bash
+npx -y @smithery/cli install @Leee62/sentry-issues-mcp --client claude
+```
+
+### Installing manually
 this is MCP Server Config
 
 ```json
