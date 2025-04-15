@@ -1,0 +1,34 @@
+{
+  "name": "sentry-issues-mcp",
+  "version": "1.0.2",
+  "description": "a mcp server to get sentry issue by id or url for LLM",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "debug": "npm run build && npx -y @modelcontextprotocol/inspector -e SENTRY_PROJ=<your_sentry_proj> -e SENTRY_HOST=<your_sentry_host> -e SENTRY_ORG=<your_sentry_org> -e SENTRY_USER_TOKEN=<your_sentry_user_token> node ./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "bin": {
+    "sentry-issues-mcp": "./build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "sentry",
+    "llm",
+    "modelcontextprotocol"
+  ],
+  "author": "lee62",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  }
+}
