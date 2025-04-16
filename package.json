@@ -1,6 +1,6 @@
 {
   "name": "sentry-issues-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a mcp server to get sentry issue by id or url for LLM",
   "main": "build/index.js",
   "scripts": {
