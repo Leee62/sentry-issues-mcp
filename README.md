@@ -5,6 +5,8 @@
 
 ## Description
 
+> ⚠️ Getting issues is deprecated as of version 1.0.5. The response structure is so similar to the event API that it's considered redundant.
+
 This is a mcp for sentry issue.\
 It supports 2 tools to get a issue or list of issues.\
 U can let LLM analysis the Res, or u want to do.
@@ -13,20 +15,23 @@ U can let LLM analysis the Res, or u want to do.
 
 - EZ size
 - EZ understand
-- EZ use
+- EZ tiny
 
 ## Tools
 
-- get-issue
-  - get a issue by url or id
+- get_single_event
+  - get a event detail infos, tiny mode return stack info, huge mode return all info
   - inputs:
-    - url_or_id: sentry issue url or sentry issue id
+    - url_or_id: sentry event url or sentry event id
     - organization_id_or_slug: sentry organization id or slug, it can be undefined
-- get-issues
-  - get list of issues
+    - project_id_or_slug: sentry project id or slug, it can be undefined
+    - mode: tiny or huge, it can be undefined
+- get_project_events
+  - get list of events, tiny mode return id and title, huge mode return all info
   - inputs:
     - project_id_or_slug: sentry project id or slug
     - organization_id_or_slug: sentry organization id or slug, it can be undefined
+    - mode: tiny or huge, it can be undefined
 
 ## QuickStart
 

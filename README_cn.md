@@ -5,6 +5,8 @@
 
 ## 简介
 
+> ⚠️ 从 1.0.5 版本开始，获取问题被弃用。 响应结构与事件 API 非常相似，因此被认为是冗余的。
+
 这是一个用于处理 Sentry Issue 的 MCP（Model Context Portal）。
 它支持两种工具来获取一个或一批 Issue。你可以选择让 LLM（大型语言模型）分析返回的结果，或者自行进行分析。
 
@@ -16,18 +18,19 @@
 
 ## 工具
 
-- get-issue (获取 Issue):
-
-  - 通过 URL 或 ID 获取单个 Issue。
-  - 输入参数：
-    - url_or_id：Sentry Issue 的 URL 或 ID。（必填）
-    - organization_id_or_slug：Sentry 组织 ID 或 Slug（可选项）。
-
-- get-issues (获取 Issue 列表):
-  - 获取 Issue 列表。
-  - 输入参数：
-    - project_id_or_slug：Sentry 项目 ID 或 Slug（可选项）。
-    - organization_id_or_slug：Sentry 组织 ID 或 Slug（可选项）。
+- get_single_event
+  - 获取 event 详细信息，tiny 模式返回 stack info，huge 模式返回全部信息
+  - inputs:
+    - url_or_id: sentry event 的 url 网址或者 event id
+    - organization_id_or_slug: 组织名
+    - project_id_or_slug: 项目名
+    - mode: 轻量信息 ting / 完整信息 huge
+- get_project_events
+  - 获取项目下的 event 列表，tiny 模式返回 id 和 title，huge 模式返回全部信息
+  - inputs:
+    - project_id_or_slug: 项目名
+    - organization_id_or_slug: 组织名
+    - mode: 轻量信息 ting / 完整信息 huge
 
 ## 快速上手
 
