@@ -2,6 +2,7 @@
 
 [![中文文档](https://img.shields.io/badge/中文文档-查看-red)](README_cn.md)
 [![English](https://img.shields.io/badge/English-Read-blue)](README.md)
+[![smithery badge](https://smithery.ai/badge/@Leee62/sentry-issues-mcp)](https://smithery.ai/server/@Leee62/sentry-issues-mcp)
 
 ## Description
 
